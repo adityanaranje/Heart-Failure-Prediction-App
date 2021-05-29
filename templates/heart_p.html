@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	
+	body {
+	background-image: url(static/images/heart1.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	}
+    
+	button {
+        display: inline-block;
+        background-color: #660000;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #ffffff;
+        text-align: center;
+        font-size: 25px;
+        padding: 15px;
+        width: 180px;
+        transition: all 0.1s;
+        cursor: pointer;
+        margin: 7px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #66ffff;
+        color: #000000;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+	
+	
+	.label1 {
+    position: relative;
+    top: 30px;
+  	color: white;
+  	padding: 10px;
+  	font-family: Arial;
+	font-weight:bold;
+    font-size: 18px;
+	}
+    
+   
+    
+	input {
+      background-color: #cccccc;
+      border: none;
+      color: black;
+      padding: 5px 25px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+
+      select {
+    padding: 2px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #cccccc;
+    color: black;
+ 	 }
+
+	.head{
+	color:white;
+	font-size:50px;
+	font-weight:bold;
+	top:40px;
+	font-style:"Times New Roman";
+	}
+
+</style>
+</head>
+
+<body>
+<div>
+	<center>
+	<form action="/result" method="POST">
+	<a class="head">
+	<h5 >&#128150 HEART FAILURE PREDICTOR &#128150</h5></a>
+    <span class="label1">
+	<label for="age">Age</label>
+	<input type="text" id="myTextBox1" name = "age" required="required" maxlength="3">
+	<br>
+
+	<label for="anaemia" >Anaemia</label>
+	<select id="myTextBox1" name="anaemia">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</select>
+	<br>
+	
+	<label for="creatinine_phosphokinase">Creatinine Phosphokinase</label>
+	<input type="text" id="myTextBox1" name = "creatinine_phosphokinase" required="required">
+	<br>
+
+	<label for="diabetes">Diabetes</label>
+	<select id="myTextBox1" name="diabetes">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</select>
+	<br>
+	
+	<label for="ejection_fraction">Ejection Fraction</label>
+	<input type="text" id="myTextBox1" name = "ejection_fraction" required="required">
+	<br>
+
+	<label for="high_blood_pressure">High Blood Pressure</label>
+	<select id="myTextBox1" name="high_blood_pressure">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</select>
+	<br>
+
+	<label for="platelets">Platelets</label>
+	<input type="text" id="myTextBox1" name = "platelets" required="required">
+	<br>	
+
+	<label for="serum_creatinine">Serum Creatinine</label>
+	<input type="text" id="myTextBox1" name = "serum_creatinine" required="required">
+	<br>	
+
+	<label for="serum_sodium">Serum Sodium</label>
+	<input type="text" id="myTextBox1" name = "serum_sodium" required="required">
+	<br>
+
+	<label for="sex">Sex</label>
+	<select id="myTextBox1" name="sex">
+	<option value="0">Female</option>
+	<option value="1">Male</option>
+	</select>
+
+	<label for="smoking">Smoking</label>
+	<select id="myTextBox1" name="smoking">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</select>
+	<br>	
+
+	<label for="time">Time</label>
+	<input type="text" id="myTextBox1" name = "time" required="required">
+	<br>	
+	
+	<button>
+      	<span>PREDICT</span>
+    	</button>
+	
+	</center>
+</div>
+</body>
+</html>
